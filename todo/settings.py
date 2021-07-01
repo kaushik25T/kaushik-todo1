@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q3&1d*m35-6m^%k52x&d2rzn_$9g4&6ql5hv=476rn@8w8o^w&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','kaushik-todo1.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','kaushik-todo1.herokuapp.com', 'cd0898d649fe.ngrok.io']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,7 +122,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
 
 # Default primary key field type
